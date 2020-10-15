@@ -1,7 +1,11 @@
 import React from 'react';
 import Card from './Card';
 
-const CardList = ( { robots } ) => {
+const CardList = ({ robots }) => {
+
+    if (true) {
+        throw new Error('Noooooooo........')
+    }
 
     // const cardComponent =  robots.map((user, i) => {
     //     return ( <Card key={i} id={robots[i].id} name={robots[i].name} email={robots[i].email} /> )
@@ -11,11 +15,11 @@ const CardList = ( { robots } ) => {
         <div>
             {robots.map((user, i) => {
                 return (
-                <Card key={i} 
-                id={robots[i].id} 
-                name={robots[i].name} 
-                email={robots[i].email} 
-                />)
+                    <Card key={i}
+                        id={robots[i].id}
+                        name={robots[i].name}
+                        email={robots[i].email}
+                    />)
             })}
         </div>
     );
